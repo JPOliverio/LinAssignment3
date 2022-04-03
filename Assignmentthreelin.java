@@ -92,7 +92,7 @@ public class Assignmentthreelin {
 
 
         //creates logfile if it doesnt already exist.
-        File logFile = new File("LogFile.txt");
+        File logFile = new File(".LogFile.txt");
         try{
             logFile.createNewFile();
         }catch (IOException e){
@@ -104,7 +104,7 @@ public class Assignmentthreelin {
 
         System.out.println("\nLog File Start");
 
-        try (BufferedReader br = new BufferedReader(new FileReader("LogFile.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(".LogFile.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
@@ -132,7 +132,7 @@ public class Assignmentthreelin {
         System.out.println(results);
 
 
-        File logFile = new File("LogFile.txt");
+        File logFile = new File(".LogFile.txt");
         try{
             logFile.createNewFile();
         }catch (IOException e){
@@ -142,7 +142,7 @@ public class Assignmentthreelin {
         encrypter test = new encrypter();
         test.decrypt(logFile, "cats");
         try{
-            Files.write(Paths.get("LogFile.txt"),results.getBytes(),StandardOpenOption.APPEND);
+            Files.write(Paths.get(".LogFile.txt"),results.getBytes(),StandardOpenOption.APPEND);
         } catch(IOException e){
             e.printStackTrace();
         }
