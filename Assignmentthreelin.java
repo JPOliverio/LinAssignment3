@@ -32,6 +32,9 @@ public class Assignmentthreelin {
                 if(username==null){
                     username=setuser();
                 }
+                if(fileName.getName()=="sample"){
+                    fileName = setfile();
+                }
                 startquiz(fileName, qask, timeLimit, username);
             }else if(userchoice.contains("-printLog")){
                 printLog();
